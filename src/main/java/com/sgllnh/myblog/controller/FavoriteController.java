@@ -17,7 +17,7 @@ import java.util.Map;
 /**
  * favorite控制器层
  *
- * @author Administrator
+ * @author wangqiang
  */
 @RestController
 @RequestMapping("generator/favorite")

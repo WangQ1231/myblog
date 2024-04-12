@@ -8,7 +8,7 @@ import java.io.Serializable;
  * 
  * </p>
  *
- * @author baomidou
+ * @author wangqiang
  * @since 2024-04-12
  */
 @TableName("post_attribute")

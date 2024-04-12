@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
  * 
  * </p>
  *
- * @author baomidou
+ * @author wangqiang
  * @since 2024-04-12
  */
 @TableName("flyway_schema_history")

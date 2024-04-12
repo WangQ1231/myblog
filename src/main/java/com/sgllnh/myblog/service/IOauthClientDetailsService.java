@@ -8,7 +8,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  *  服务类
  * </p>
  *
- * @author baomidou
+ * @author wangqiang
  * @since 2024-04-12
  */
 public interface IOauthClientDetailsService extends IService<OauthClientDetails> {
