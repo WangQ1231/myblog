@@ -1,0 +1,23 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: myblog
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.98.226.38:3306/db_myblog?characterEncoding=UTF8&useSSL=false&allowMultiQueries=true&serverTimezone=GMT%2B8
+    username: root
+    password: Wq.10093020394
+
+mybatis-plus:
+  # xml扫描，多个目录用逗号或者分号分隔（告诉 Mapper 所对应的 XML 文件位置）
+  mapper-locations: classpath:mapper/*/*.xml
+  configuration:
+    default-statement-timeout: 30
+    map-underscore-to-camel-case: true
+logging:
+  level:
+    com.sgllnh.myblog: debug
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
