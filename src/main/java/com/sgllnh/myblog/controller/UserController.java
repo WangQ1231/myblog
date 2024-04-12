@@ -80,4 +80,34 @@ public class UserController {
         return R.ok();
     }
 
+
+    @ApiOperation(value = "注册用户信息", notes = "注册用户信息")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "username", value = "用户名", allowMultiple = true, dataType = "String", paramType = "query"),
+            @ApiImplicitParam(name = "password", value = "密码", allowMultiple = true, dataType = "String", paramType = "query"),
+            @ApiImplicitParam(name = "email", value = "email", allowMultiple = true, dataType = "String", paramType = "query")
+    })
+    @RequestMapping(method = RequestMethod.POST, value = "/register")
+    public R register(@RequestParam String username, @RequestParam String password, @RequestParam String email) {
+        //查询用户
+        User user = userService.findByUsername(username);
+        if (user == null) {
+            //注册
+            userService.register(username, password, email);
+            return R.ok();
+        } else {
+            return R.error("该用户已注册");
+        }
+    }
+
+    @ApiOperation(value = "登录用户信息", notes = "登录用户信息")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "username", value = "用户名", allowMultiple = true, dataType = "String", paramType = "query"),
+            @ApiImplicitParam(name = "password", value = "密码", allowMultiple = true, dataType = "String", paramType = "query")
+    })
+    @RequestMapping(method = RequestMethod.POST, value = "/login")
+    public R login (@RequestParam String username, @RequestParam String password) {
+        //return userService.login(username, password);
+        return null;
+    }
 }

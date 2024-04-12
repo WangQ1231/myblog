@@ -13,4 +13,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IUserService extends IService<User> {
 
+    User findByUsername(String username);
+
+    void register(String username, String password,String email);
 }
